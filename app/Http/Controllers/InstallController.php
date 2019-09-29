@@ -352,7 +352,7 @@ class InstallController extends Controller {
 
 	public function sbApi( $pco ){
 		$url = "http://solutionsbricks.com/license";
-		$data = array("p"=>1,"n"=>$pco,"u"=>\URL::to('/'),"v"=>$this->version);
+		$data = array("p"=>1,"n"=>$pco,"u"=>"http://ss.dynamichead.com","v"=>$this->version);
 		if(function_exists('curl_init')){
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $url);
